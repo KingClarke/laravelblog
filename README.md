@@ -6,6 +6,8 @@ This repository is linked to [this youtube video](https://www.youtube.com/watch?
 •	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
 •	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
 
+**Author: Luke Clarke**
+
 ## Requirements
 •	PHP 7.3 or higher <br>
 •	Node 12.13.0 or higher <br>
