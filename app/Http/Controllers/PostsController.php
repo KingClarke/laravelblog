@@ -128,5 +128,15 @@ class PostsController extends Controller
         return redirect('/blog')
             ->with('message', 'Your post has been deleted!');
     }
+
+    public function about()
+    {
+        return view('blog.about');
+    }
+
+    public function blog()
+    {
+        return view('blog.blog');
+    }
 }
 

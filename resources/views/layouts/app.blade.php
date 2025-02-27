@@ -27,6 +27,10 @@
                 <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline hover:underline" href="/">Home</a>
                     <a class="no-underline hover:underline" href="/blog">Blog</a>
+                    <ul>
+                        <li><a href="{{ route('about') }}">About</a></li>
+                        <li><a href="{{ route('blog') }}">Blog</a></li>
+                    </ul>
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))
