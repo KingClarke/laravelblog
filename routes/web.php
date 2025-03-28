@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::get('/blog', [App\Http\Controllers\PostsController::class, 'blog'])->name
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::get('/blog', [PostsController::class, 'index'])->name('blog.index');
+
+Route::post('/blog/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
