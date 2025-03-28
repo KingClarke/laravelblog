@@ -56,10 +56,22 @@
         </h2>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-lg font-extrabold">
-            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Supervalue</span>
-            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Centra</span>
-            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Musgrave MarketPlace</span>
-            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Musgrave Extended Range</span>
+            <div>
+                <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Supervalue</span>
+                <img src="{{ asset('images/supervalue-logo.jpg') }}" alt="Supervalue Logo" class="w-200 h-200 mx-auto mt-2 rounded-lg shadow-md">
+            </div>
+            <div>
+                <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Centra</span>
+                <img src="{{ asset('images/centra-logo.jpg') }}" alt="Centra Logo" class="w-200 h-200 mx-auto mt-2 rounded-lg shadow-md">
+            </div>
+            <div>
+                <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Musgrave MarketPlace</span>
+                <img src="{{ asset('images/musgrave-marketplace-logo.jpg') }}" alt="Musgrave MarketPlace Logo" class="w-200 h-200 mx-auto mt-2 rounded-lg shadow-md">
+            </div>
+            <div>
+                <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Musgrave Extended Range</span>
+                <img src="{{ asset('images/musgrave-extended-logo.jpg') }}" alt="Musgrave Extended Range Logo" class="w-200 h-200 mx-auto mt-2 rounded-lg shadow-md">
+            </div>
         </div>
     </div>
 
