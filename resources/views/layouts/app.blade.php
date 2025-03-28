@@ -1,61 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    
-    <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <title>{{ config('app.name', 'Laravel Blog') }}</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div id="app">
-        <header class="bg-gray-800 py-6">
-            <div class="container mx-auto flex justify-between items-center px-6">
-                <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
-                    <a class="no-underline hover:underline" href="/">Home</a>
-                    <a class="no-underline hover:underline" href="/blog">Blog</a>
-                    <a class="no-underline hover:underline" href="/about">About</a>
-                    <a class="no-underline hover:underline" href="/contact">Contact</a>
-                    @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        @endif
-                    @else
-                        <span>{{ Auth::user()->name }}</span>
-
-                        <a href="{{ route('logout') }}"
-                           class="no-underline hover:underline"
-                           onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                            {{ csrf_field() }}
-                        </form>
-                    @endguest
-                </nav>
-            </div>
-        </header>
-
-        <div>
-            @yield('content')
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-yellow-400 text-white py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-3xl font-bold uppercase">KooKee Blog</a>
+            <nav>
+                <a href="/" class="px-4 py-2 hover:text-gray-800 transition">Home</a>
+                <a href="/blog" class="px-4 py-2 hover:text-gray-800 transition">Blog</a>
+                <a href="/about" class="px-4 py-2 hover:text-gray-800 transition">About</a>
+                <a href="/contact" class="px-4 py-2 hover:text-gray-800 transition">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <div>
-            @include('layouts.footer')
-        </div>
-    </div>
+    <main class="py-10">
+        @yield('content')
+    </main>
+
+    <footer class="bg-yellow-500 text-white py-4 text-center">
+        <p>&copy; {{ date('Y') }} KooKee Blog. All rights reserved.</p>
+    </footer>
 </body>
 </html>
