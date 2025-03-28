@@ -29,3 +29,5 @@ Route::get('/about', [App\Http\Controllers\PostsController::class, 'about'])->na
 Route::get('/blog', [App\Http\Controllers\PostsController::class, 'blog'])->name('blog');
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+
+Route::get('/blog', [PostsController::class, 'index'])->name('blog.index');
