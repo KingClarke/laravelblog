@@ -11,7 +11,8 @@
             @php
                 $flavours = [
                     'Triple Chocolate Chip',
-                    'Double Chocolate, Oatmeal and Raisin',
+                    'Double Chocolate',
+                    'Oatmeal and Raisin',
                     'Ginger Shortbread',
                     'Cinnamon and Nutmeg',
                     'Coconut and Cranberry',
@@ -25,7 +26,7 @@
 
             @foreach ($flavours as $flavour)
                 <div class="bg-white shadow-md rounded p-4">
-                    <img src="{{ asset('images/default-cookie.jpg') }}" alt="{{ $flavour }}" class="w-full h-40 object-cover rounded mb-4">
+                    <img src="{{ asset('images/' . Str::slug($flavour) . '.jpg') }}" alt="{{ $flavour }}" class="w-full h-40 object-cover rounded mb-4">
                     <h2 class="text-xl font-bold text-gray-800 mb-2">{{ $flavour }}</h2>
                     <p class="text-gray-600 mb-4">Delicious {{ $flavour }} cookies, perfect for any occasion!</p>
                     <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Learn More</a>
