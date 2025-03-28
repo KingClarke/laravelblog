@@ -1,104 +1,102 @@
 @extends('layouts.app')
 
 @section('content')
+    {{-- Hero Section --}}
     <div class="background-image grid grid-cols-1 m-auto">
-        <div class="flex text-gray-100 pt-10">
+        <div class="flex text-white pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    At home cookie mixes for all the family!
+                    At-home Cookie Mixes for All the Family!
                 </h1>
                 <a 
                     href="/blog"
-                    class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                    class="text-center bg-yellow-400 text-gray-800 py-3 px-6 font-bold text-xl uppercase rounded-full shadow-lg hover:bg-yellow-500 transition duration-300">
                     Read More
                 </a>
             </div>
         </div>
     </div>
 
+    {{-- About Us Section --}}
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="{{ asset('images/Evoke-cookies2.jpeg') }}" width="900" alt="">
+            <img src="{{ asset('images/Evoke-cookies2.jpeg') }}" width="1200" alt="Delicious Cookies" class="rounded-lg shadow-lg">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
-            <h2 class="text-3xl font-extrabold text-gray-600">
+            <h2 class="text-4xl font-extrabold text-yellow-600">
                 About Us
             </h2>
             
-            <p class="py-8 text-gray-500 text-s">
-                KooKee is a home company that's been growing steadaly since' 09. Designed to be simple and easy to include kids in with a variety of flavores and colors.
+            <p class="py-8 text-gray-600 text-lg">
+                KooKee is a home company that's been growing steadily since '09. Designed to be simple and easy to include kids in with a variety of flavors and colors.
             </p>
 
-            <p class="font-extrabold text-gray-600 text-s pb-9">
-                Our mission is to bring easy to make, bake and partake, cookies to shelves all around Ireland.
+            <p class="font-extrabold text-gray-700 text-lg pb-9">
+                Our mission is to bring easy-to-make, bake, and partake cookies to shelves all around Ireland.
             </p>
 
             <a 
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                class="uppercase bg-yellow-400 text-gray-800 text-lg font-extrabold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300">
                 Find Out More
             </a>
         </div>
     </div>
 
-    <div class="text-center p-15 bg-black text-white">
-        <h1 class="text-2xl pb-5 text-l"> 
-            Where to find Kookee Mixes
+    {{-- Stockists Section --}}
+    <div class="text-center p-15 bg-yellow-500 text-white">
+        <h1 class="text-4xl pb-5 font-bold"> 
+            Where to Find KooKee Mixes
         </h1>
 
-        <h2 class="text-2xl pb-5 text-l"> 
-            Get your hands on kookee mixes in store at the places shown below. and keep an eye out for new stockists coming soon!
+        <h2 class="text-2xl pb-5 font-semibold"> 
+            Get your hands on KooKee mixes in-store at the places shown below.
+            And keep an eye out for new stockists coming soon!
         </h2>
 
-        <span class="font-extrabold block text-4xl py-1">
-            Supervalue
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Centra
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Musgrave MarketPlace
-        </span>
-        <span class="font-extrabold block text-4xl py-1">
-            Musgrave extendred range
-        </span>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-lg font-extrabold">
+            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Supervalue</span>
+            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Centra</span>
+            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Musgrave MarketPlace</span>
+            <span class="block py-2 bg-yellow-600 rounded-lg shadow-md">Musgrave Extended Range</span>
+        </div>
     </div>
 
+    {{-- Blog Section --}}
     <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">
-            Blog
-        </span>
 
         <h2 class="text-4xl font-bold py-10">
             Recent Posts
         </h2>
 
-        <p class="m-auto w-4/5 text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos temporibus quaerat facere consectetur qui.
+        <p class="m-auto w-4/5 text-gray-600 text-lg">
+            Discover the latest updates, recipes, and tips from KooKee. Stay inspired and bake with love!
         </p>
     </div>
 
+    {{-- Featured Blog Section --}}
     <div class="sm:grid grid-cols-2 w-4/5 m-auto">
-        <div class="flex bg-yellow-700 text-gray-100 pt-10">
+        <div class="flex bg-yellow-400 text-gray-800 pt-10 rounded-lg shadow-lg">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-                <span class="uppercase text-xs">
+                <span class="uppercase text-sm font-bold">
                     PHP
                 </span>
 
-                <h3 class="text-xl font-bold py-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi ex? Nemo hic placeat et?
+                <h3 class="text-2xl font-bold py-10">
+                    All our products are Guaranteed Irish, and we are proud to be a part of the community.
+                    Some are award-winning with related stickers on the packaging, all are made with love.
                 </h3>
 
                 <a 
                     href=""
-                    class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                    class="uppercase bg-transparent border-2 border-gray-800 text-gray-800 text-sm font-extrabold py-3 px-5 rounded-full hover:bg-gray-800 hover:text-white transition duration-300">
                     Find Out More
                 </a>
             </div>
         </div>
         <div>
-            <img src="{{ asset('images/Guaranteed-Irish-logo.jpg') }}" width="700" alt="">
+            <img src="{{ asset('images/Guaranteed-Irish-logo.jpg') }}" width="1200" alt="Guaranteed Irish Logo" class="rounded-lg shadow-lg">
         </div>
     </div>
 @endsection
