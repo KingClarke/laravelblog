@@ -5,7 +5,7 @@
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
+                    At home cookie mixes for all the family!
                 </h1>
                 <a 
                     href="/blog"
@@ -18,7 +18,7 @@
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
-            <img src="{{ asset('images/Evoke-cookies2.jpeg') }}" width="700" alt="">
+            <img src="{{ asset('images/Evoke-cookies2.jpeg') }}" width="900" alt="">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
@@ -43,21 +43,25 @@
     </div>
 
     <div class="text-center p-15 bg-black text-white">
+        <h1 class="text-2xl pb-5 text-l"> 
+            Where to find Kookee Mixes
+        </h1>
+
         <h2 class="text-2xl pb-5 text-l"> 
-            I'm an expert in...
+            Get your hands on kookee mixes in store at the places shown below. and keep an eye out for new stockists coming soon!
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">
-            Ux Design
+            Supervalue
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Project Management
+            Centra
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
+            Musgrave MarketPlace
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Backend Development
+            Musgrave extendred range
         </span>
     </div>
 
@@ -94,7 +98,7 @@
             </div>
         </div>
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
+            <img src="{{ asset('images/Guaranteed-Irish-logo.jpg') }}" width="700" alt="">
         </div>
     </div>
 @endsection
