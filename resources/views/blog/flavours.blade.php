@@ -6,21 +6,17 @@
         <p class="text-center text-gray-600 mb-10">
             We currently produce two ranges: a Bake at Home Dry Cookie Mix and a Bake in Store Cookie Mix. 
             At present, we have 11 flavours in total, 9 of which are available in gluten/wheat free.
+            6 of which are linked below.
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             @php
                 $flavours = [
-                    'Triple Chocolate Chip',
-                    'Double Chocolate',
-                    'Oatmeal and Raisin',
-                    'Ginger Shortbread',
-                    'Cinnamon and Nutmeg',
-                    'Coconut and Cranberry',
-                    'Lemon Shortbread',
-                    'Oatmeal and Chocolate',
-                    'Spotai',
-                    'Pecan and White Chocolate',
-                    'Macadamia and Dark Chocolate'
+                    ['Triple Chocolate Chip',  'url' => 'https://kookee.ie/products/triple-chocolate-chip'],
+                    ['Double Chocolate',  'url' => 'https://kookee.ie/products/double-chocolate-chip'],
+                    ['Choc a Lot',  'url' => 'https://kookee.ie/products/choc-a-lot-chocolate-chip'],
+                    ['Coconut and Cranberry',  'url' => 'https://kookee.ie/products/coconut-and-cranberry'],
+                    ['Spotai',  'url' => 'https://kookee.ie/products/spotai-chocolate-chip'],
+                    ['Macadamia and Dark Chocolate',  'url' => 'https://kookee.ie/products/oatmeal-and-dark-chocolate-chip']
                 ];
             @endphp
 
