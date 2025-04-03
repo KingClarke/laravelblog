@@ -14,7 +14,7 @@ This repository is linked to [this youtube video](https://www.youtube.com/watch?
 Setting up your development environment on your local machine: <br>
 ```
 git clone git@github.com/KingClarke/laravelblog.git
-cd laravelblo
+cd laravel
 cp .env.example .env
 composer install
 php artisan key:generate
@@ -26,7 +26,7 @@ php artisan serve
 Create a database <br>
 ```
 mysql
-create database laravelblog;
+create database laravel;
 exit;
 ```
 
