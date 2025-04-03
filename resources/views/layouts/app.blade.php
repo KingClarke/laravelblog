@@ -15,6 +15,7 @@
                 <a href="/blog" class="px-4 py-2 hover:text-gray-800 transition">Blog</a>
                 <a href="/about" class="px-4 py-2 hover:text-gray-800 transition">About</a>
                 <a href="/contact" class="px-4 py-2 hover:text-gray-800 transition">Contact</a>
+                <a href="/flavours" class="px-4 py-2 hover:text-gray-800 transition">Flavours</a>
 
                 @auth
                     <form action="{{ route('logout') }}" method="POST" class="inline">

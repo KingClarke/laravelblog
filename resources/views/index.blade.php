@@ -106,7 +106,6 @@
         <div class="flex bg-yellow-400 text-gray-800 pt-10 rounded-lg shadow-lg">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
                 <span class="uppercase text-sm font-bold">
-                    PHP
                 </span>
 
                 <h3 class="text-2xl font-bold py-10">
