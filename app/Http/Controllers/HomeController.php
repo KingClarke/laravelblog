@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // Fetch the latest 3 posts
+        $posts = Post::latest()->take(3)->get();
+
+        return view('index', compact('posts'));
     }
 }

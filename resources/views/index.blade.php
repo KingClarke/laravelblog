@@ -77,14 +77,28 @@
 
     {{-- Blog Section --}}
     <div class="text-center py-15">
-
         <h2 class="text-4xl font-bold py-10">
             Recent Posts
         </h2>
 
-        <p class="m-auto w-4/5 text-gray-600 text-lg">
+        <p class="m-auto w-4/5 text-gray-600 text-lg pb-10">
             Discover the latest updates, recipes, and tips from KooKee. Stay inspired and bake with love!
         </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-4/5 m-auto">
+            @forelse ($posts as $post)
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <img src="{{ asset('images/' . $post->image_path) }}" alt="{{ $post->title }}" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">{{ $post->title }}</h3>
+                    <p class="text-gray-600 mb-4">{{ Str::limit($post->description, 100) }}</p>
+                    <a href="{{ route('blog.show', $post->slug) }}" class="bg-yellow-400 text-gray-800 px-4 py-2 rounded-lg shadow-lg hover:bg-yellow-500 transition">
+                        Keep Reading
+                    </a>
+                </div>
+            @empty
+                <p class="text-center text-gray-600">No recent posts available.</p>
+            @endforelse
+        </div>
     </div>
 
     {{-- Featured Blog Section --}}

@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CommentController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,10 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::get('/', [PagesController::class, 'index']);
+Route::get('/', function () {
+    $posts = Post::latest()->take(3)->get();
+    return view('index', compact('posts'));
+});
 
 Route::resource('/blog', PostsController::class);
 
@@ -40,3 +45,9 @@ Route::post('/contact', [ContactController::class, 'submit'])->name('contact.sub
 Route::get('/blog', [PostsController::class, 'index'])->name('blog.index');
 
 Route::post('/blog/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+
+// Logout Route
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/')->with('success', 'You have been logged out.');
+})->name('logout');

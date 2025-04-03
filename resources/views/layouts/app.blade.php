@@ -10,11 +10,22 @@
     <header class="bg-yellow-400 text-white py-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <a href="/" class="text-3xl font-bold uppercase">KooKee Blog</a>
-            <nav>
+            <nav class="flex items-center">
                 <a href="/" class="px-4 py-2 hover:text-gray-800 transition">Home</a>
                 <a href="/blog" class="px-4 py-2 hover:text-gray-800 transition">Blog</a>
                 <a href="/about" class="px-4 py-2 hover:text-gray-800 transition">About</a>
                 <a href="/contact" class="px-4 py-2 hover:text-gray-800 transition">Contact</a>
+
+                @auth
+                    <form action="{{ route('logout') }}" method="POST" class="inline">
+                        @csrf
+                        <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
+                            Logout
+                        </button>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Login</a>
+                @endauth
             </nav>
         </div>
     </header>

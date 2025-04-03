@@ -1,6 +1,5 @@
 <?php
 
-namespace App\Models;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +15,14 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('post_id');
+            $table->unsignedBigInteger('user_id');
+            $table->text('content');
             $table->timestamps();
+
+            // Foreign keys
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -28,27 +34,5 @@ class CreateCommentsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('comments');
-    }
-}
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Comment extends Model
-{
-    use HasFactory;
-
-    protected $fillable = ['content', 'post_id', 'user_id'];
-
-    // Relationship with Post
-    public function post()
-    {
-        return $this->belongsTo(Post::class);
-    }
-
-    // Relationship with User
-    public function user()
-    {
-        return $this->belongsTo(User::class);
     }
 }
